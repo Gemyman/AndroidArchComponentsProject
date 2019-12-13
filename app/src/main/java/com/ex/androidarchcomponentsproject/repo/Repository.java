@@ -13,7 +13,7 @@ import retrofit2.Response;
 public class Repository {
 
 
-    MutableLiveData<DataModel> data ;
+    MutableLiveData<DataModel> data = new MutableLiveData<DataModel>();
 
     public MutableLiveData<DataModel> getData (){
         try {
@@ -22,7 +22,7 @@ public class Repository {
             call.enqueue(new Callback<DataModel>(){
                 @Override
                 public void onResponse(Call<DataModel> call, Response<DataModel> response) {
-                    data.setValue(response.body());
+                    data.postValue(response.body());
                 }
 
                 @Override

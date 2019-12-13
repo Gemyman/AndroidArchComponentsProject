@@ -1,13 +1,15 @@
 package com.ex.androidarchcomponentsproject.models;
 
-public class DataModel {
-    private Items[] items;
+import java.util.ArrayList;
 
-    public Items[] getItems() {
+public class DataModel {
+    private ArrayList<Items> items;
+
+    public ArrayList<Items> getItems() {
         return items;
     }
 
-    public void setItems(Items[] items) {
+    public void setItems(ArrayList<Items> items) {
         this.items = items;
     }
 
