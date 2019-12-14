@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'realm-android'
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
     defaultConfig {
         applicationId "com.ex.androidarchcomponentsproject"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -43,4 +43,5 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.8.0") {
         exclude group: "com.androidx"
     }
+    implementation 'io.realm:android-adapters:2.0.0'
 }

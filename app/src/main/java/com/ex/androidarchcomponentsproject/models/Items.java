@@ -1,13 +1,21 @@
 package com.ex.androidarchcomponentsproject.models;
 
-public class Items
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
+
+public class Items extends RealmObject
 {
     private String photoUrl;
 
+    @Required
     private String name;
 
+    @Required
     private String description;
 
+    @PrimaryKey
+    @Required
     private String id;
 
     public String getPhotoUrl ()

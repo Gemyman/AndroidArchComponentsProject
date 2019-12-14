@@ -16,6 +16,8 @@ import com.ex.androidarchcomponentsproject.models.Items;
 
 import java.util.ArrayList;
 
+import io.realm.Realm;
+
 public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.ViewHolder> {
 
     Context context;
@@ -80,5 +82,6 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.ViewHo
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
 }
 

@@ -2,7 +2,9 @@ package com.ex.androidarchcomponentsproject.models;
 
 import java.util.ArrayList;
 
-public class DataModel {
+import io.realm.RealmObject;
+
+public class DataModel  {
     private ArrayList<Items> items;
 
     public ArrayList<Items> getItems() {
