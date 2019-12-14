@@ -19,9 +19,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ex.androidarchcomponentsproject.MainActivity;
 import com.ex.androidarchcomponentsproject.R;
 import com.ex.androidarchcomponentsproject.models.DataModel;
 import com.ex.androidarchcomponentsproject.models.Items;
+import com.ex.androidarchcomponentsproject.ui.details.DetailedFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +83,9 @@ public class MainFragment extends Fragment implements MenuListAdapter.ItemClickL
 
     @Override
     public void onItemClick(View view, int position) {
-
+        String imgUrl = menuListAdapter.getItemImgURL(position);
+        String itemDesc = menuListAdapter.getItemDesc(position);
+        ((MainActivity)getActivity()).loadFragment(DetailedFragment.newInstance(imgUrl , itemDesc));
     }
 
     public boolean isOnline(Context context) {

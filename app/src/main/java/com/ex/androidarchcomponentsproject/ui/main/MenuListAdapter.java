@@ -69,8 +69,12 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.ViewHo
     }
 
     // convenience method for getting data at click position
-    public String getItem(int id) {
-        return items.get(id).getId();
+    public String getItemImgURL(int id) {
+        return items.get(id).getPhotoUrl();
+    }
+
+    public String getItemDesc(int id) {
+        return items.get(id).getDescription();
     }
 
     // allows clicks events to be caught
